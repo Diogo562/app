@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="departamentoT">
+    <Key>
+      <PropertyRef Name="departamentoID" />
+    </Key>
+    <Property Name="departamentoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="empregadoT">
+    <Key>
+      <PropertyRef Name="empregadoID" />
+    </Key>
+    <Property Name="empregadoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="testarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="departamentoTs" EntityType="Self.departamentoT" />
+    <EntitySet Name="empregadoTs" EntityType="Self.empregadoT" />
+  </EntityContainer>
+</Schema>

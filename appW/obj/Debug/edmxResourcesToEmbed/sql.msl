@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="testarModelStoreContainer" CdmEntityContainer="testarEntities">
+    <EntitySetMapping Name="departamentoTs">
+      <EntityTypeMapping TypeName="testarModel.departamentoT">
+        <MappingFragment StoreEntitySet="departamentoT">
+          <ScalarProperty Name="departamentoID" ColumnName="departamentoID" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empregadoTs">
+      <EntityTypeMapping TypeName="testarModel.empregadoT">
+        <MappingFragment StoreEntitySet="empregadoT">
+          <ScalarProperty Name="empregadoID" ColumnName="empregadoID" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
